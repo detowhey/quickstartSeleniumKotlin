@@ -7,8 +7,8 @@ import kotlin.test.assertTrue
 
 class ManagerTest : BaseTest() {
 
-    private val homePagina: HomePage = HomePage(webDriver)
-    private val managerPage: ManagerPage = ManagerPage(webDriver)
+    private val homePagina: HomePage by lazy { HomePage(webDriver) }
+    private val managerPage: ManagerPage by lazy { ManagerPage(webDriver) }
 
     @Test
     fun validateCustomreMessageCreatedSuccessfully() {

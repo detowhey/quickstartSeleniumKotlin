@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 abstract class BaseTest {
 
-    val webDriver = ChromeDriver()
+    val webDriver by lazy { ChromeDriver() }
 
     companion object {
         @BeforeClass

@@ -7,8 +7,8 @@ import kotlin.test.assertEquals
 
 class CustomerTest : BaseTest() {
 
-    private val homePage: HomePage = HomePage(webDriver)
-    private val customerPage: CustomerPage = CustomerPage(webDriver)
+    private val homePage: HomePage by lazy { HomePage(webDriver) }
+    private val customerPage: CustomerPage by lazy { CustomerPage(webDriver) }
 
     @Test
     fun validateLoginCustomer() {
