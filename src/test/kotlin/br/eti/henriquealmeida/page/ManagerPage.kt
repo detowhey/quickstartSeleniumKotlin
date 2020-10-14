@@ -9,17 +9,17 @@ class ManagerPage(webDriver: WebDriver) : BasePage(webDriver) {
     fun addNewCustomer() {
         interaction.clickWebElement(By.cssSelector("button[ ng-click = \"addCust()\"]"))
 
-        interaction.insertWebElementText(
+        interaction.insertTextWebElement(
             By.cssSelector("input[ng-model = \"fName\"]"),
             RandomData.firstNameRandom()
         )
 
-        interaction.insertWebElementText(
+        interaction.insertTextWebElement(
             By.cssSelector("input[ng-model = \"lName\"]"),
             RandomData.lastNameRandom()
         )
 
-        interaction.insertWebElementText(
+        interaction.insertTextWebElement(
             By.cssSelector("input[ng-model = \"postCd\"]"),
             RandomData.postalCodeRandom()
         )

@@ -23,7 +23,7 @@ class Interaction(private val webDriver: WebDriver) {
         return alertText
     }
 
-    fun insertWebElementText(typeResearch: By, text: String) = searchWebElement(typeResearch).sendKeys(text)
+    fun insertTextWebElement(typeResearch: By, text: String) = searchWebElement(typeResearch).sendKeys(text)
 
     fun selectValueVisibleText(typeResearch: By, visibleText: String) =
         Select(searchWebElement(typeResearch)).selectByVisibleText(visibleText)
