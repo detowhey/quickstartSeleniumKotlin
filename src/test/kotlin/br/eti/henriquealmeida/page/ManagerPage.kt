@@ -27,5 +27,5 @@ class ManagerPage(webDriver: WebDriver) : BasePage(webDriver) {
         interaction.clickWebElement(By.cssSelector("button[type = \"submit\"]"))
     }
 
-    fun getAlertTextCustomerAdd() = interaction.returnAlertText()
+    fun getAlertTextCustomerAdd(): String = interaction.returnAlertText()
 }
